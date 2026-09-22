@@ -1,0 +1,7 @@
+{
+  "identifier": "default",
+  "description": "Default permissions for the PGlove chrome UI",
+  "windows": ["main"],
+  "webviews": ["main"],
+  "permissions": ["core:default"]
+}

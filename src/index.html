@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PGlove</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header id="chrome">
+    <!-- Tab strip -->
+    <nav id="tabstrip" aria-label="Tabs"></nav>
+
+    <!-- Toolbar -->
+    <div id="toolbar">
+      <button id="btn-back" class="tool-btn" title="Back (Alt+Left)" aria-label="Back">
+        <svg viewBox="0 0 24 24"><path d="M15.5 4.5 8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button id="btn-forward" class="tool-btn" title="Forward (Alt+Right)" aria-label="Forward">
+        <svg viewBox="0 0 24 24"><path d="M8.5 4.5 16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button id="btn-reload" class="tool-btn" title="Reload (Ctrl+R)" aria-label="Reload">
+        <span id="reload-icon">&#x21bb;</span><span id="stop-icon" hidden>&#x2715;</span>
+      </button>
+      <span id="loading-ball" class="pball-spin" hidden></span>
+
+      <div id="address-wrap">
+        <input id="address" type="text" autocapitalize="off" autocomplete="off"
+               spellcheck="false" placeholder="Search or type a URL (PGlove search)" />
+        <div id="address-ghost" hidden>PGlove Start &middot; Gotta browse &rsquo;em all!</div>
+        <span id="addr-spark" aria-hidden="true"></span>
+      </div>
+
+      <button id="btn-newtab" class="tool-btn" title="New tab (Ctrl+T)" aria-label="New tab">+</button>
+      <button id="btn-menu" class="tool-btn" title="Menu" aria-label="Menu">&#8942;</button>
+
+      <div id="menu" hidden>
+        <div class="menu-head">PGlove <span class="menu-ver">v1.0.4 &middot; Pok&eacute;mon</span></div>
+        <button class="menu-item" data-action="new-tab">&#127380; New Tab</button>
+        <button class="menu-item" data-action="start">&#127921; PGlove Start</button>
+        <button class="menu-item" data-action="pglove-site">&#127758; PGlove Homepage</button>
+        <button class="menu-item" data-action="github">&#128221; GitHub Repo</button>
+        <div class="menu-sep"></div>
+        <button class="menu-item" data-action="about">&#128513; About PGlove</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="stage" aria-hidden="true"></main>
+
+  <!-- About dialog -->
+  <div id="about-overlay" hidden>
+    <div id="about-card">
+      <div class="about-ball"></div>
+      <h2>PGlove</h2>
+      <p class="about-tag">A Browser With A New Generation</p>
+      <p class="about-ver">v1.0.4 &middot; Pok&eacute;mon Theme &middot; Made in India &#127470;&#127475;</p>
+      <p class="about-txt">The browser that breaks so you don&rsquo;t have to.<br/>Tauri &middot; WebView2 &middot; 100% BRO GANG energy.</p>
+      <button id="about-close" class="about-btn">Gotta catch &rsquo;em… &nbsp;Close</button>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

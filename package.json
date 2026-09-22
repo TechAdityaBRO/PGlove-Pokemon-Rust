@@ -1,0 +1,19 @@
+{
+  "name": "pglove",
+  "version": "1.0.4",
+  "private": true,
+  "description": "PGlove — A Browser With A New Generation (Tauri desktop, Pokémon theme)",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "icons": "powershell -ExecutionPolicy Bypass -File scripts/make-icons.ps1"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.5.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.5.0",
+    "esbuild": "^0.25.0"
+  }
+}

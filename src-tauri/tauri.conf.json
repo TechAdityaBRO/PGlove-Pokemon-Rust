@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "PGlove",
+  "version": "1.0.4",
+  "identifier": "org.pglove.desktop",
+  "build": {
+    "beforeDevCommand": "npm run build",
+    "devUrl": null,
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "PGlove",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 520,
+        "minHeight": 400,
+        "center": true,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": ["icons/icon.ico", "icons/icon.png"]
+  }
+}

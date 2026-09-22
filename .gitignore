@@ -1,0 +1,16 @@
+# Node
+node_modules/
+dist/
+
+# Rust
+src-tauri/target/
+src-tauri/gen/
+
+# Generated
+src-tauri/icons/icon.ico
+src-tauri/icons/icon.png
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.log
